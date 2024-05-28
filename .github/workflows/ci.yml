@@ -41,7 +41,8 @@ jobs:
       run: |
         rm -rf notebooks/.cache/*subcubic_analyze_gaps*
         rm -rf notebooks/.cache/*with-perf*
-    - run: sudo apt-get install dvipng texlive-latex-extra texlive-fonts-recommended cm-super pdfcrop optipng pngcrush 
+    - run: sudo apt-get update -y
+    - run: sudo apt-get install -y dvipng texlive-latex-extra texlive-fonts-recommended cm-super texlive-extra-utils optipng pngcrush 
     - uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
